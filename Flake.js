@@ -39,8 +39,7 @@ export default class Flake extends Component {
     let newY = y + Math.cos(this.angle + density) + 10 + radius / 2;
 
     // Send flakes back from the top once they exit the screen
-    if (x > width + radius * 2 || x < -(radius * 2) || y > height)
-    {
+    if (x > width + radius * 2 || x < -(radius * 2) || y > height) {
       duration = 0;                   // no animation
       newX = Math.random() * width;   // random x
       newY = -10;                     // above the screen top
@@ -49,7 +48,7 @@ export default class Flake extends Component {
       if (Math.floor(Math.random() * 3) + 1 > 1) {
         newX = Math.random() * width;
         newY = -10;
-      // Send the rest to either left or right
+        // Send the rest to either left or right
       } else {
         // If the flake is exiting from the right
         if (Math.sin(this.angle) > 0) {

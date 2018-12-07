@@ -3,7 +3,9 @@ import {
   Dimensions,
   Image,
   StyleSheet,
-  View
+  View,
+  TouchableHighlight,
+  Text
 } from 'react-native';
 import Flake from './Flake';
 
@@ -12,11 +14,37 @@ const { width, height } = Dimensions.get('window');
 
 export default class Tree extends Component {
 
-  static defaultProps = {
-    flakesCount: 50, // total number of flakes on the screen
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      flakesCount: this.props.flakesCount
+    }
   }
 
-  render({ flakesCount } = this.props) {
+  onLongPress = (ev) => {
+    this.setState({
+      ...this.state,
+      flakesCount: 0
+    })
+  }
+
+  onPress = (ev) => {
+    this.makeItRain()
+  }
+
+  makeItRain = () => {
+    this.setState({
+      ...this.state,
+      flakesCount: this.state.flakesCount + 25
+    })
+  }
+
+  static defaultProps = {
+    flakesCount: 0, // total number of flakes on the screen
+  }
+
+  render({ flakesCount } = this.state) {
     return <View style={styles.container}>
       {/* Christmas Tree background image */}
       <Image
@@ -25,13 +53,18 @@ export default class Tree extends Component {
       >
         {/* Render flakesCount number of flakes */}
         {[...Array(flakesCount)].map((_, index) => <Flake
-            x={Math.random() * width}               // x-coordinate
-            y={Math.random() * height}              // y-coordinate
-            radius={Math.random() * 4 + 1}          // radius
-            density={Math.random() * flakesCount}   // density
-            key={index}
-          />)}
+          x={Math.random() * width}               // x-coordinate
+          y={Math.random() * height}              // y-coordinate
+          radius={Math.random() * 4 + 1}          // radius
+          density={Math.random() * flakesCount}   // density
+          key={index}
+        />)}
       </Image>
+      <TouchableHighlight onPress={this.onPress} underlayColor="red" onLongPress={this.onLongPress}>
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>Make it Rain (Winter Style)</Text>
+        </View>
+      </TouchableHighlight>
     </View>;
   }
 
@@ -47,4 +80,12 @@ const styles = StyleSheet.create({
     width: width,
     position: 'relative',
   },
+  button: {
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttonText: {
+    color: "green"
+  }
 });
