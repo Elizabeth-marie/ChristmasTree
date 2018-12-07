@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Draggable from "./Circles";
+import { Fonts } from './Fonts'
 import {
   Dimensions,
   Image,
@@ -47,6 +49,7 @@ export default class Tree extends Component {
   render({ flakesCount } = this.state) {
     return <View style={styles.container}>
       {/* Christmas Tree background image */}
+
       <Image
         style={styles.image}
         source={require('./assets/tree.jpg')}
@@ -60,11 +63,13 @@ export default class Tree extends Component {
           key={index}
         />)}
       </Image>
+
       <TouchableHighlight onPress={this.onPress} underlayColor="red" onLongPress={this.onLongPress}>
         <View style={styles.button}>
           <Text style={styles.buttonText}>Make it Rain (Winter Style)</Text>
         </View>
       </TouchableHighlight>
+
     </View>;
   }
 
@@ -86,6 +91,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   buttonText: {
-    color: "green"
+    fontFamily: Fonts.MountainsofChristmas,
+    color: "green",
+    fontSize: 25,
   }
 });

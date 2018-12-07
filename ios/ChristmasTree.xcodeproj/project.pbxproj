@@ -24,6 +24,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		D526A89B1A684BD78AE760C8 /* MountainsofChristmas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE75705AA83B4C6D93306711 /* MountainsofChristmas.ttf */; };
+		45194A396D8B4528A54C4180 /* MountainsofChristmas-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3653C03519294497926D1945 /* MountainsofChristmas-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +194,7 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		FE75705AA83B4C6D93306711 /* MountainsofChristmas.ttf */ = {isa = PBXFileReference; name = "MountainsofChristmas.ttf"; path = "../assets/fonts/MountainsofChristmas.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3653C03519294497926D1945 /* MountainsofChristmas-Regular.ttf */ = {isa = PBXFileReference; name = "MountainsofChristmas-Regular.ttf"; path = "../assets/fonts/MountainsofChristmas-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				FE75705AA83B4C6D93306711 /* MountainsofChristmas.ttf */,
+				3653C03519294497926D1945 /* MountainsofChristmas-Regular.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -675,6 +678,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				D526A89B1A684BD78AE760C8 /* MountainsofChristmas.ttf in Resources */,
+				45194A396D8B4528A54C4180 /* MountainsofChristmas-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

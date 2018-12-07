@@ -54,6 +54,7 @@
     <key>UIAppFonts</key>
     <array>
       <string>MountainsofChristmas.ttf</string>
+      <string>MountainsofChristmas-Regular.ttf</string>
     </array>
   </dict>
 </plist>
